@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grocery List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="Add Item..." tabindex="1">
+
+            <select class="sections" id="sections" tabindex="2">
+                <option value="misc">Misc</option>
+                <option value="veggies">Fruits & Veggies</option>
+                <option value="meats">Meats</option>
+                <option value="grains">Grains</option>
+                <option value="dairy">Dairy</option>
+                <option value="pharmacy">Pharmacy</option>
+            </select>
+
+            <span class="addBtn" tabindex="3">Add</span>
+        </div>
+
+        <!-- Navigation links (hidden by default) -->
+        <div class="myLinks" id="myLinks">
+            <a class="reset">Reset All Check Marks</a>
+            <a class="delete">Delete All Items in All Catergories</a>
+            <a class="download">Download Grocery List</a>
+            <a class="upload">Upload Grocery List</a>
+            <a class="about">About The App</a> 
+        </div>
+        
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a class="icon" id="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <button class="accordion veggiesBtn">Veggies</button>
+    <div class="panel">
+        <ul class='grocery-list veggies'></ul>
+    </div>
+
+    <button class="accordion meatsBtn">Meats</button>
+    <div class="panel">
+        <ul class='grocery-list meats'></ul>
+    </div>
+
+    <button class="accordion grainsBtn">Grains</button>
+    <div class="panel">
+        <ul class='grocery-list grains'></ul>
+    </div>
+
+    <button class="accordion dairyBtn">Dairy</button>
+    <div class="panel">
+        <ul class='grocery-list dairy'></ul>
+    </div>
+
+    <button class="accordion pharmacyBtn">Pharmacy</button>
+    <div class="panel">
+        <ul class='grocery-list pharmacy'></ul>
+    </div>
+
+    <button class="accordion miscBtn">Misc</button>
+    <div class="panel">
+        <ul class='grocery-list misc'></ul>
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+      
+    <script src="./app.js"></script>
+</body>
+</html>
