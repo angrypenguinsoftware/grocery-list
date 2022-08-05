@@ -16,6 +16,7 @@ const grainsButton = document.querySelector('.grainsBtn');
 const dairyButton = document.querySelector('.dairyBtn');
 const miscButton = document.querySelector('.miscBtn');
 const pharmacyButton = document.querySelector('.pharmacyBtn');
+const frozenButton = document.querySelector('.frozenBtn');
 
 const veggiesSection = document.querySelector('.veggies');
 const meatsSection = document.querySelector('.meats');
@@ -23,6 +24,7 @@ const grainsSection = document.querySelector('.grains');
 const dairySection = document.querySelector('.dairy');
 const miscSection = document.querySelector('.misc');
 const pharmacySection = document.querySelector('.pharmacy');
+const frozenSection = document.querySelector('.frozen');
 
 const inputElement = document.getElementById("inputElement");
 
@@ -69,6 +71,9 @@ const app = {
                     case 'meats':
                         meatsSection.appendChild(item);
                         break;
+                    case 'frozen':
+                        frozenSection.appendChild(item);
+                        break;
                     case 'grains':
                         grainsSection.appendChild(item);
                         break;
@@ -95,6 +100,7 @@ const app = {
         // Add Number of Items in Each section
         veggiesButton.innerHTML = `<b>Fruits & Veggies</b> - ${this.getNumberOfItems('veggies')} Items - ${this.getNumberNotChecked('veggies')} not checked`;
         meatsButton.innerHTML = `<b>Meats</b> - ${this.getNumberOfItems('meats')} Items - ${this.getNumberNotChecked('meats')} not checked`;
+        frozenButton.innerHTML = `<b>Frozen</b> - ${this.getNumberOfItems('frozen')} Items - ${this.getNumberNotChecked('frozen')} not checked`;
         grainsButton.innerHTML = `<b>Grains</b> - ${this.getNumberOfItems('grains')} Items - ${this.getNumberNotChecked('grains')} not checked`;
         dairyButton.innerHTML = `<b>Dairy</b> - ${this.getNumberOfItems('dairy')} Items - ${this.getNumberNotChecked('dairy')} not checked`;
         miscButton.innerHTML = `<b>Misc</b> - ${this.getNumberOfItems('misc')} Items - ${this.getNumberNotChecked('misc')} not checked`;
@@ -105,6 +111,7 @@ const app = {
     clearLists(){
         veggiesSection.innerHTML = '';
         meatsSection.innerHTML = '';
+        frozenSection.innerHTML = '';
         grainsSection.innerHTML = '';
         dairySection.innerHTML = '';
         miscSection.innerHTML = '';
@@ -344,7 +351,7 @@ const handlers = {
                 inputElement.hidden === true ? inputElement.hidden = false : inputElement.hidden = true;
                 break;
             case "about":
-                alert("Made By Me - This is version 3.4")
+                alert("Made By Me - This is version 3.5")
                 break;
             default:
                 // do nothing
@@ -434,6 +441,7 @@ const handlers = {
 
         veggiesSection.addEventListener('click', this.addCheckMark);
         meatsSection.addEventListener('click', this.addCheckMark);
+        frozenSection.addEventListener('click', this.addCheckMark);
         grainsSection.addEventListener('click', this.addCheckMark);
         dairySection.addEventListener('click', this.addCheckMark);
         miscSection.addEventListener('click', this.addCheckMark);
@@ -441,6 +449,7 @@ const handlers = {
 
         veggiesButton.addEventListener('click', this.expandPanel);
         meatsButton.addEventListener('click', this.expandPanel);
+        frozenButton.addEventListener('click', this.expandPanel);
         grainsButton.addEventListener('click', this.expandPanel);
         dairyButton.addEventListener('click', this.expandPanel);
         miscButton.addEventListener('click', this.expandPanel);
